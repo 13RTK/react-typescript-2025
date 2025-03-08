@@ -2,3 +2,4 @@ node_modules
 dist
 lab
 pnpm-lock.yaml
+*-demo
