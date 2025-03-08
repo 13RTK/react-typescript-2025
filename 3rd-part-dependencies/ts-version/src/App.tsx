@@ -3,13 +3,18 @@ import { useForm } from 'react-hook-form';
 import ErrorMessage from './components/ErrorMessage';
 
 function App() {
+  type FormValues = {
+    email: string;
+    password: string;
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormValues>();
 
-  function onSubmit(data) {
+  function onSubmit(data: FormValues) {
     console.log(data);
   }
 
